@@ -1,0 +1,53 @@
+:root {
+    --color-gray: #4C4C4C;
+    --color-light-blue: #A0CFD3;
+    --color-blue: #2D6ED8;
+    --color-brown: #B88B4A;
+    --color-yellow: #EFCB68;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-gray);
+    color: var(--color-light-blue);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+header ul {
+    list-style: none;
+}
+
+main {
+    width: 50%;
+    text-align: center;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    margin: 0;
+}
+
+.about {
+    padding-top: clamp(3rem, 5vw, 5rem);
+    font-size: clamp(0.9rem, 2vw, 2rem);
+}
+
+.highlight {
+    color: var(--color-yellow)
+}
