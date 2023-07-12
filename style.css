@@ -25,12 +25,25 @@ body {
 
 header {
     position: absolute;
-    top: 1rem;
-    left: 1rem;
+    top: 2rem;
+    left: auto;
+    right: auto;
 }
 
 header ul {
     list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+header ul li {
+    margin: 0 clamp(2rem, 5vw, 4rem);
+    font-size: clamp(.9rem, 2vw, 1.5rem);
+}
+
+header ul li a {
+    text-decoration: none;
+    color: var(--color-light-blue);
 }
 
 main {
@@ -50,4 +63,22 @@ h1 {
 
 .highlight {
     color: var(--color-yellow)
+}
+
+footer {
+    position: absolute;
+    bottom: 2rem;
+    left: auto;
+    right: auto;
+}
+
+.fa {
+    margin: 0 2rem;
+    padding: .75rem;
+    border-radius: 50%;
+    font-size: 4rem;
+    text-decoration: none;
+    text-align: center;
+    background: var(--color-light-blue);
+    color: var(--color-blue)
 }
