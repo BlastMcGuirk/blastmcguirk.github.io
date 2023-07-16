@@ -58,8 +58,12 @@ header ul li a {
   color: var(--color-light-blue);
 }
 
+header ul li a:hover {
+  color: var(--color-blue)
+}
+
 main {
-  width: 50%;
+  width: 49%;
   text-align: center;
 }
 
@@ -85,13 +89,15 @@ footer {
 }
 
 .fa {
-  margin: 0 2rem;
-  padding: .75rem;
-  border-radius: 50%;
+  margin: 0 clamp(2rem, 5vw, 4rem);
   font-size: clamp(2rem, 3vw, 4rem);
   width: clamp(2rem, 3vw, 4rem);
   text-decoration: none;
   text-align: center;
-  background: var(--color-light-blue);
+  background: var(--color-gray);
+  color: var(--color-light-blue)
+}
+
+.fa:hover {
   color: var(--color-blue)
 }
