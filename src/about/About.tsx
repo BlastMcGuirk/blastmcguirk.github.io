@@ -1,3 +1,10 @@
+import "../index.css"
+import { Layout } from "../components/layout/Layout"
+
 export const About = () => {
-    return <h1>Hello there!</h1>
+    return (
+        <Layout>
+            <h1>Hello there!</h1>
+        </Layout>
+    )
 }
