@@ -1,6 +1,8 @@
 import { Box, Container, Grid2 as Grid, Link, Stack, Typography } from '@mui/material';
-import ProjectCard from '../components/ProjectCard';
+import ProjectCard, { RepoInfo } from '../components/ProjectCard';
+import { useEffect, useState } from 'react';
 
+const API_URL = 'https://api.github.com/users/BlastMcGuirk/repos';
 const repoList = [
     'KitchenBuddy-Server',
     'KitchenBuddy-Client',
@@ -13,6 +15,20 @@ const repoList = [
 ]
 
 export default function Projects() {
+    const [info, setInfo] = useState<RepoInfo[]>([]);
+
+    useEffect(() => {
+        fetch(API_URL)
+            .then(response => response.json())
+            .then(json => setInfo(json.map((j: any) => ({
+                name: j.name,
+                description: j.description,
+                stars: j.stargazers_count,
+                forks: j.forks_count
+            }))))
+            .catch(error => console.error(error));
+    }, []);
+    
     return (
         <Box>
             <Container
@@ -31,9 +47,14 @@ export default function Projects() {
 
                     <Grid container spacing={2} sx={{ width: '100%' }}>
                         {repoList.map(repo => {
+                            const repoInfo = info.filter(i => i.name === repo)[0];
+                            if (repoInfo !== undefined)
                             return (
                                 <Grid key={repo} size={{ sm: 12, md: 6 }}>
-                                    <ProjectCard repo={repo} />
+                                    <ProjectCard name={repo} 
+                                                 description={repoInfo.description}
+                                                 stars={repoInfo.stars}
+                                                 forks={repoInfo.forks} />
                                 </Grid>
                             );
                         })}
