@@ -4,7 +4,6 @@ import About from "./pages/About"
 import App from "./pages/App"
 import Awards from "./pages/Awards"
 import Projects from "./pages/Projects"
-import "./index.css"
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom"
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -12,7 +11,7 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import Header from "./components/Header"
 import Footer from "./components/Footer"
-import { Button, CssBaseline, Stack, Toolbar } from "@mui/material"
+import { CssBaseline, Stack, Toolbar } from "@mui/material"
 
 const Layout = () => {
   return (
