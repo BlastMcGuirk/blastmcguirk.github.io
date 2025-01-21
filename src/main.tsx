@@ -1,6 +1,5 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
-import { Provider } from "react-redux"
 import About from "./pages/About"
 import App from "./pages/App"
 import Awards from "./pages/Awards"
