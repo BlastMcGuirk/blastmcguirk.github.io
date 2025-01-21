@@ -22,8 +22,8 @@ export default function About() {
                             borderRadius: "50%",
                             marginY: "1rem"
                         }}
-                        alt="Skiing in WA"
-                        src="../../pic_of_me.jpg" />
+                        alt="Picture of me"
+                        src="./pic_of_me.jpg" />
 
                     <Typography variant='body1' fontSize={20} textAlign={'center'} mb={4} maxWidth={700}>
                         My name is Brendan McGuirk.
@@ -71,7 +71,7 @@ export default function About() {
 
                     <Typography variant='body1' fontSize={20} mb={4} width={'100%'} maxWidth={700}>
                         For more details about my accomplishments, feel free to check out my&nbsp;
-                        <Link href='../../Brendan McGuirk Resume.pdf' underline='hover'>resumé</Link>! 📄
+                        <Link href='./Brendan McGuirk Resume.pdf' underline='hover'>resumé</Link>! 📄
                     </Typography>
 
                     <Typography variant='h5' mb={1}>Technical Skills:</Typography>

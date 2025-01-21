@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "start": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && copyfiles -f src/pages/pic_of_me.jpg \"src/pages/Brendan McGuirk Resume.pdf\" build",
     "preview": "vite preview",
     "test": "vitest",
     "format": "prettier --write .",
@@ -37,6 +37,7 @@
     "@types/react-router": "^5.1.20",
     "@types/testing-library__jest-dom": "^5.14.5",
     "@vitejs/plugin-react": "^4.0.0",
+    "copyfiles": "^2.4.1",
     "eslint": "^8.0.0",
     "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-prettier": "^4.2.1",
