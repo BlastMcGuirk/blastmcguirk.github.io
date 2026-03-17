@@ -74,7 +74,7 @@ export default function Summary() {
             fontSize: 'inherit',
           }}
         >
-          &nbsp;5+ years of experience
+          &nbsp;6+ years of experience
           </Typography>
           .
       </Typography>
